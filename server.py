@@ -5,7 +5,8 @@ class ServeHandler(BaseHTTPRequestHandler):
 		self.send_response(200)
 		self.send_header('content-type', 'text/html')
 		self.end_headers()
-		self.wfile.write('Server is working fine!'.encode())
+		self.wfile.write('Server is working fine! Path = '.encode())
+		self.wfile.write(self.path.encode())
 
 
 
